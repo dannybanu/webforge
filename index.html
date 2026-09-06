@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebForge — Creare Site-uri și Aplicații Web Rapide, Moderne, Scalabile</title>
+<meta name="description" content="WebForge construiește site-uri de prezentare, magazine online și aplicații web custom, rapide (Lighthouse 90+), moderne și scalabile. Cere o ofertă gratuită astăzi.">
+<meta name="keywords" content="creare site web, dezvoltare aplicatii web, magazin online, web design, agentie web development, site de prezentare, aplicatii custom, webforge">
+<meta name="author" content="WebForge">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="Romanian">
+<meta name="geo.region" content="RO">
+<meta name="theme-color" content="#5b5bf5">
+<link rel="canonical" href="https://www.webforge.tm.ro/">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<link rel="apple-touch-icon" href="/assets/logo.png">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.webforge.tm.ro/">
+<meta property="og:site_name" content="WebForge">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:title" content="WebForge — Creare Site-uri și Aplicații Web Rapide, Moderne, Scalabile">
+<meta property="og:description" content="Construim site-uri de prezentare, magazine online și aplicații web custom, rapide și scalabile. Cere o ofertă gratuită.">
+<meta property="og:image" content="https://www.webforge.tm.ro/assets/logo.png">
+<meta property="og:image:width" content="882">
+<meta property="og:image:height" content="202">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.webforge.tm.ro/">
+<meta name="twitter:title" content="WebForge — Creare Site-uri și Aplicații Web Rapide, Moderne, Scalabile">
+<meta name="twitter:description" content="Construim site-uri de prezentare, magazine online și aplicații web custom, rapide și scalabile.">
+<meta name="twitter:image" content="https://www.webforge.tm.ro/assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Structured Data: Organization + WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WebForge",
+  "url": "https://www.webforge.tm.ro/",
+  "logo": "https://www.webforge.tm.ro/assets/logo.png",
+  "description": "Agenție de dezvoltare web: site-uri de prezentare, magazine online și aplicații web custom.",
+  "email": "contact@webforge.ro",
+  "telephone": "+40700000000",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "RO"
+  },
+  "sameAs": [
+    "https://facebook.com",
+    "https://instagram.com",
+    "https://tiktok.com",
+    "https://youtube.com"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WebForge",
+  "url": "https://www.webforge.tm.ro/",
+  "inLanguage": "ro-RO"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Web Development",
+  "provider": { "@type": "Organization", "name": "WebForge" },
+  "areaServed": "RO",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicii WebForge",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Site-uri de prezentare" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Magazine online" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Aplicații web custom" } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Cât durează dezvoltarea unui site?",
+      "acceptedAnswer": { "@type": "Answer", "text": "În funcție de complexitate, un site de prezentare durează 2-3 săptămâni, iar o aplicație custom între 6-12 săptămâni." }
+    },
+    {
+      "@type": "Question",
+      "name": "Oferiți mentenanță după lansare?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Da, toate pachetele includ o perioadă de mentenanță gratuită, iar ulterior oferim abonamente flexibile de suport." }
+    },
+    {
+      "@type": "Question",
+      "name": "Pot cere modificări în timpul dezvoltării?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolut. Lucrăm iterativ și îți prezentăm progresul la fiecare etapă, pentru feedback rapid." }
+    },
+    {
+      "@type": "Question",
+      "name": "Ce tehnologii folosiți?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Alegem stack-ul potrivit fiecărui proiect (React, Next.js, Node.js etc.), mereu cu focus pe viteză și scalabilitate." }
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-alt:#f7f8fb;
+    --text:#12131a;
+    --text-muted:#5b5f6b;
+    --card:#ffffff;
+    --border:#e7e8ee;
+    --accent:#5b5bf5;
+    --accent-2:#00d4b8;
+    --accent-grad:linear-gradient(135deg,#5b5bf5 0%,#8a5bf5 50%,#00d4b8 100%);
+    --shadow:0 10px 40px rgba(20,20,50,.08);
+    --radius:20px;
+    --maxw:1180px;
+  }
+  [data-theme="dark"]{
+    --bg:#0b0c12;
+    --bg-alt:#12131c;
+    --text:#f2f3f7;
+    --text-muted:#a2a5b3;
+    --card:#151725;
+    --border:#232538;
+    --shadow:0 10px 40px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Plus Jakarta Sans', system-ui, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:background .3s ease, color .3s ease;
+    overflow-x:hidden;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .container{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  section{padding:110px 0;}
+  h1,h2,h3{line-height:1.15; letter-spacing:-.02em;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:600; color:var(--accent);
+    background:rgba(91,91,245,.1); padding:6px 14px; border-radius:999px;
+    margin-bottom:18px; text-transform:uppercase; letter-spacing:.06em;
+  }
+  .section-title{font-size:clamp(28px,4vw,42px); font-weight:800; margin-bottom:14px;}
+  .section-sub{color:var(--text-muted); font-size:17px; max-width:560px; margin-bottom:56px;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* NAV */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:color-mix(in srgb, var(--bg) 80%, transparent);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+  }
+  nav{display:flex; align-items:center; justify-content:space-between; padding:30px 24px; max-width:var(--maxw); margin:0 auto;}
+  .logo{display:flex; align-items:center; gap:8px; transition:transform .3s ease, filter .3s ease; position:relative;}
+  .logo img{height:58px; width:auto; display:block; animation:logoPulse 3s ease-in-out infinite;}
+  .logo:hover{transform:translateY(-3px) scale(1.08) rotate(-2deg); filter:drop-shadow(0 10px 20px rgba(91,91,245,.5));}
+  .logo:hover img{animation-play-state:paused;}
+  .logo:active{transform:translateY(0) scale(.96);}
+  @keyframes logoPulse{
+    0%,100%{filter:drop-shadow(0 0 0 rgba(91,91,245,0));}
+    50%{filter:drop-shadow(0 0 10px rgba(91,91,245,.35));}
+  }
+  .nav-links{display:flex; gap:14px; font-weight:600; font-size:15px;}
+  .nav-links a{
+    color:var(--text-muted); padding:9px 16px; border-radius:10px; border:1px solid var(--border);
+    transition:color .2s ease, transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .nav-links a:hover{
+    color:var(--text); border-color:var(--accent); background:var(--card);
+    transform:translateY(-3px); box-shadow:0 6px 16px rgba(91,91,245,.25);
+  }
+  .nav-actions{display:flex; align-items:center; gap:14px;}
+  .hamburger{
+    display:none; flex-direction:column; justify-content:center; align-items:center; gap:5px;
+    width:44px; height:44px; border-radius:12px; border:1px solid var(--border); background:var(--card);
+    cursor:pointer; padding:0;
+  }
+  .hamburger span{
+    width:20px; height:2px; background:var(--text); border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .theme-toggle{
+    width:44px; height:44px; border-radius:50%; border:1px solid var(--border);
+    background:var(--card); cursor:pointer; display:flex; align-items:center; justify-content:center;
+    font-size:18px; transition:transform .2s;
+  }
+  .theme-toggle:hover{transform:scale(1.08);}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 26px; border-radius:12px; font-weight:600; font-size:15px;
+    cursor:pointer; border:none; transition:transform .2s, box-shadow .2s;
+  }
+  .btn-primary{background:var(--accent-grad); color:#fff; box-shadow:0 8px 24px rgba(91,91,245,.35);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(91,91,245,.45);}
+  .btn-outline{background:transparent; border:1px solid var(--border); color:var(--text);}
+  .btn-outline:hover{background:var(--bg-alt); transform:translateY(-2px);}
+  .btn-sm{padding:10px 18px; font-size:14px;}
+
+  /* HERO */
+  .hero{
+    padding:200px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; top:-200px; right:-200px; width:600px; height:600px;
+    background:var(--accent-grad); filter:blur(120px); opacity:.25; border-radius:50%;
+    z-index:0;
+  }
+  .hero-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:60px; align-items:center; position:relative; z-index:1;}
+  .hero h1{font-size:clamp(34px,5vw,58px); font-weight:800; margin-bottom:22px;}
+  .hero h1 .grad{background:var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero p.sub{font-size:19px; color:var(--text-muted); margin-bottom:34px; max-width:520px;}
+  .hero-ctas{display:flex; gap:16px; margin-bottom:40px; flex-wrap:wrap;}
+  .hero-stats{display:flex; gap:36px; flex-wrap:wrap;}
+  .hero-stats div{display:flex; flex-direction:column;}
+  .hero-stats strong{font-size:26px; font-weight:800;}
+  .hero-stats span{font-size:13px; color:var(--text-muted);}
+
+  /* Device mockup */
+  .mockup-wrap{position:relative; display:flex; justify-content:center; align-items:center;}
+  .laptop{
+    width:100%; max-width:480px; background:var(--card); border:1px solid var(--border);
+    border-radius:16px; box-shadow:var(--shadow); padding:14px;
+    animation:float 5s ease-in-out infinite;
+  }
+  .laptop .bar{display:flex; gap:6px; margin-bottom:12px;}
+  .laptop .bar span{width:10px; height:10px; border-radius:50%; background:var(--border);}
+  .laptop .screen{
+    border-radius:10px; background:var(--accent-grad); aspect-ratio:16/10; position:relative; overflow:hidden;
+  }
+  .laptop .screen::after{
+    content:''; position:absolute; inset:12px; background:rgba(255,255,255,.15); border-radius:8px;
+    backdrop-filter:blur(4px);
+  }
+  .phone{
+    position:absolute; bottom:-30px; right:-20px; width:110px; background:var(--card);
+    border:1px solid var(--border); border-radius:22px; padding:8px; box-shadow:var(--shadow);
+    animation:float 4s ease-in-out infinite 1s;
+  }
+  .phone .screen{border-radius:14px; background:linear-gradient(135deg,#00d4b8,#5b5bf5); aspect-ratio:9/17;}
+  @keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-14px);}
+  }
+
+  /* trust bar */
+  .trust{padding:36px 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);}
+  .trust .container{display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; opacity:.6; font-weight:700; letter-spacing:.04em;}
+
+  /* SERVICES */
+  .cards-3{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:36px 30px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    position:relative; overflow:hidden;
+  }
+  .card:hover{transform:translateY(-8px); box-shadow:var(--shadow); border-color:transparent;}
+  .card .icon{
+    width:56px; height:56px; border-radius:14px; background:var(--accent-grad);
+    display:flex; align-items:center; justify-content:center; font-size:26px; margin-bottom:22px;
+    transition:transform .3s;
+  }
+  .card:hover .icon{transform:rotate(-8deg) scale(1.08);}
+  .card h3{font-size:20px; font-weight:700; margin-bottom:10px;}
+  .card p{color:var(--text-muted); font-size:15px; margin-bottom:18px;}
+  .card ul{list-style:none; color:var(--text-muted); font-size:14px; display:flex; flex-direction:column; gap:8px;}
+  .card ul li::before{content:'✓ '; color:var(--accent-2); font-weight:800;}
+
+  /* BENEFITS */
+  .benefits{background:var(--bg-alt);}
+  .cards-6{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .benefit{
+    background:var(--card); border:1px solid var(--border); border-radius:16px; padding:28px;
+    display:flex; gap:16px; align-items:flex-start;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .benefit:hover{transform:translateY(-8px) scale(1.02); box-shadow:var(--shadow); border-color:var(--accent);}
+  .benefit .icon{font-size:26px; transition:transform .3s ease;}
+  .benefit:hover .icon{transform:scale(1.2) rotate(-6deg);}
+  .benefit h3{font-size:16px; font-weight:700; margin-bottom:6px;}
+  .benefit p{font-size:14px; color:var(--text-muted);}
+  .result-banner{
+    margin-top:56px; background:var(--accent-grad); border-radius:var(--radius); padding:44px;
+    color:#fff; text-align:center;
+  }
+  .result-banner p.small{opacity:.75; font-size:14px; margin-bottom:10px; text-decoration:line-through;}
+  .result-banner p.big{font-size:clamp(20px,3vw,28px); font-weight:700;}
+
+  /* SOCIAL SIDEBAR */
+  .social-sidebar{
+    position:fixed; left:0; top:50%; transform:translateY(-50%); z-index:95;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .social-sidebar a{
+    width:60px; height:60px; display:flex; align-items:center; justify-content:center;
+    background:var(--accent-grad); border:1px solid var(--border); border-left:none;
+    color:#fff; font-size:20px;
+    border-radius:0 16px 16px 0;
+    box-shadow:0 6px 18px rgba(91,91,245,.35);
+    transition:background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  .social-sidebar a svg{width:26px; height:26px;}
+  .social-sidebar a:hover{
+    background:linear-gradient(135deg,#00d4b8 0%,#5b5bf5 60%,#8a5bf5 100%);
+    color:#fff; transform:translateX(10px) scale(1.05); box-shadow:0 10px 26px rgba(91,91,245,.5); border-color:transparent;
+  }
+  @media (max-width:700px){ .social-sidebar{display:none;} }
+
+  /* PROCESS */
+  .timeline{position:relative; display:grid; grid-template-columns:repeat(5,1fr); gap:24px; margin-top:40px;}
+  .timeline .progress-line{
+    position:absolute; top:44px; left:10%; height:3px; background:var(--accent-grad); width:0%; z-index:0;
+    border-radius:3px; transition:width 1.4s ease;
+  }
+  .timeline.animate .progress-line{width:80%;}
+  .step{
+    position:relative; z-index:1; text-align:center;
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:34px 22px; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .step:hover{transform:translateY(-10px); box-shadow:var(--shadow); border-color:var(--accent);}
+  .step .num{
+    width:64px; height:64px; border-radius:50%; background:var(--card); border:3px solid var(--accent);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:24px; margin:0 auto 22px;
+    color:var(--accent); transition:transform .3s ease, background .3s ease, color .3s ease, box-shadow .3s ease;
+    opacity:0; transform:scale(.4);
+  }
+  .timeline.animate .step .num{
+    animation:popIn .5s ease forwards;
+  }
+  .timeline.animate .step:nth-child(2) .num{animation-delay:.1s;}
+  .timeline.animate .step:nth-child(3) .num{animation-delay:.4s;}
+  .timeline.animate .step:nth-child(4) .num{animation-delay:.7s;}
+  .timeline.animate .step:nth-child(5) .num{animation-delay:1.0s;}
+  .timeline.animate .step:nth-child(6) .num{animation-delay:1.3s;}
+  @keyframes popIn{
+    0%{opacity:0; transform:scale(.4);}
+    60%{opacity:1; transform:scale(1.15);}
+    100%{opacity:1; transform:scale(1);}
+  }
+  .step:hover .num{transform:scale(1.15); background:var(--accent-grad); color:#fff; border-color:transparent; box-shadow:0 8px 20px rgba(91,91,245,.35);}
+  .step .num.pulse{animation:pulse 1.6s ease-in-out infinite;}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(91,91,245,.4);}
+    50%{box-shadow:0 0 0 10px rgba(91,91,245,0);}
+  }
+  .step h3{font-size:19px; font-weight:800; margin-bottom:10px;}
+  .step p{font-size:15px; color:var(--text-muted); line-height:1.5;}
+
+  /* TESTIMONIALS */
+  .testi-track-wrap{overflow:hidden; position:relative;}
+  .testi-track{display:flex; gap:24px; transition:transform .5s ease;}
+  .testi-card{
+    min-width:calc(33.333% - 16px); background:var(--card); border:1px solid var(--border);
+    border-radius:var(--radius); padding:30px; flex-shrink:0;
+  }
+  .testi-card .stars{color:#f5b100; margin-bottom:14px; font-size:15px;}
+  .testi-card p.quote{font-size:15px; color:var(--text); margin-bottom:22px; line-height:1.6;}
+  .testi-person{display:flex; align-items:center; gap:12px;}
+  .avatar{
+    width:42px; height:42px; border-radius:50%; background:var(--accent-grad);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:15px;
+  }
+  .testi-person strong{font-size:14px; display:block;}
+  .testi-person span{font-size:12px; color:var(--text-muted);}
+  .testi-controls{display:flex; justify-content:center; gap:12px; margin-top:32px;}
+  .testi-controls button{
+    width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:var(--card);
+    cursor:pointer; font-size:16px;
+  }
+  .testi-controls button:hover{background:var(--accent); color:#fff; border-color:transparent;}
+
+  /* PRICING */
+  .pricing{background:var(--bg-alt);}
+  .cards-4{display:grid; grid-template-columns:repeat(4,1fr); gap:22px;}
+  .price-card{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:32px 26px; display:flex; flex-direction:column; transition:transform .25s, box-shadow .25s;
+  }
+  .price-card:hover{transform:translateY(-8px); box-shadow:var(--shadow);}
+  .price-card.featured{border:2px solid var(--accent); position:relative;}
+  .price-card.featured::before{
+    content:'Cel mai popular'; position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+    background:var(--accent-grad); color:#fff; font-size:12px; font-weight:700; padding:6px 16px; border-radius:999px;
+  }
+  .price-card h3{font-size:18px; font-weight:700; margin-bottom:6px;}
+  .price-card .price{font-size:34px; font-weight:800; margin:14px 0;}
+  .price-card .price span{font-size:14px; font-weight:500; color:var(--text-muted);}
+  .price-card ul{list-style:none; display:flex; flex-direction:column; gap:10px; margin:22px 0 28px; font-size:14px; color:var(--text-muted); flex-grow:1;}
+  .price-card ul li::before{content:'✓ '; color:var(--accent-2); font-weight:800;}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--border); padding:20px 0;}
+  .faq-q{display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:600; font-size:16px;}
+  .faq-q .plus{transition:transform .3s; font-size:20px; color:var(--accent);}
+  .faq-item.open .faq-q .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .35s ease;}
+  .faq-a p{padding-top:14px; color:var(--text-muted); font-size:14px; line-height:1.6;}
+
+  /* CONTACT */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;}
+  .contact-info .item{display:flex; gap:14px; align-items:flex-start; margin-bottom:26px;}
+  .contact-info .icon{
+    width:44px; height:44px; border-radius:12px; background:var(--accent-grad); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; color:#fff;
+  }
+  .contact-info h3{font-size:15px; font-weight:700; margin-bottom:2px;}
+  .contact-info p{font-size:14px; color:var(--text-muted);}
+  form{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:34px; display:flex; flex-direction:column; gap:16px;}
+  form input, form textarea{
+    width:100%; padding:14px 16px; border-radius:10px; border:1px solid var(--border);
+    background:var(--bg); color:var(--text); font-family:inherit; font-size:14px;
+  }
+  form input:focus, form textarea:focus{outline:2px solid var(--accent);}
+  form label{font-size:13px; font-weight:600; margin-bottom:-8px; color:var(--text-muted);}
+
+  footer{border-top:1px solid var(--border); padding:40px 0; text-align:center; color:var(--text-muted); font-size:14px;}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.visible{opacity:1; transform:translateY(0);}
+
+  /* Sticky floating CTA */
+  .float-cta{
+    position:fixed; bottom:24px; right:24px; z-index:90;
+    box-shadow:0 10px 30px rgba(91,91,245,.4);
+  }
+
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;}
+    .mockup-wrap{order:-1;}
+    .cards-3,.cards-6,.cards-4{grid-template-columns:repeat(2,1fr);}
+    .timeline{grid-template-columns:repeat(2,1fr);}
+    .timeline .progress-line{display:none;}
+    .contact-grid{grid-template-columns:1fr;}
+    .hamburger{display:flex;}
+    .nav-links{
+      position:fixed; top:0; right:0; height:100vh; width:min(78vw,320px);
+      background:var(--card); border-left:1px solid var(--border);
+      flex-direction:column; align-items:stretch; gap:6px;
+      padding:110px 22px 30px; z-index:99;
+      transform:translateX(100%); transition:transform .35s ease;
+      box-shadow:-10px 0 40px rgba(0,0,0,.15);
+    }
+    .nav-links.open{transform:translateX(0);}
+    .nav-links a{
+      padding:14px 16px; font-size:16px; opacity:0; transform:translateX(16px);
+      transition:opacity .3s ease, transform .3s ease, color .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .nav-links.open a{opacity:1; transform:translateX(0);}
+    .nav-links.open a:nth-child(1){transition-delay:.08s;}
+    .nav-links.open a:nth-child(2){transition-delay:.14s;}
+    .nav-links.open a:nth-child(3){transition-delay:.2s;}
+    .nav-links.open a:nth-child(4){transition-delay:.26s;}
+    .nav-links.open a:nth-child(5){transition-delay:.32s;}
+    .nav-links.open a:nth-child(6){transition-delay:.38s;}
+    .nav-overlay{
+      position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:98;
+      opacity:0; visibility:hidden; transition:opacity .3s ease, visibility .3s ease;
+    }
+    .nav-overlay.open{opacity:1; visibility:visible;}
+    .testi-card{min-width:100%;}
+  }
+  @media (max-width:700px){
+    nav{padding:20px 18px;}
+    .logo img{height:44px;}
+    .hero{padding:150px 0 70px;}
+    .hero-ctas{flex-direction:column; align-items:stretch;}
+    .hero-ctas .btn{width:100%;}
+    .hero-stats{gap:22px; justify-content:space-between;}
+    .cards-3,.cards-6,.cards-4{grid-template-columns:1fr;}
+    .timeline{grid-template-columns:1fr;}
+    section{padding:64px 0;}
+    .section-title{margin-bottom:10px;}
+    .section-sub{margin-bottom:36px;}
+    .float-cta{bottom:16px; right:16px; padding:12px 18px; font-size:14px;}
+  }
+  @media (max-width:420px){
+    .hero-stats{gap:16px;}
+    .hero-stats strong{font-size:22px;}
+    .nav-actions .btn-sm{display:none;}
+    .price-card,.card,.benefit{padding:24px 20px;}
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<header>
+  <nav>
+    <a href="#" class="logo" title="Acasă"><img src="assets/logo.png" alt="WebForge logo"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#servicii">Servicii</a>
+      <a href="#beneficii">Beneficii</a>
+      <a href="#proces">Proces</a>
+      <a href="#preturi">Prețuri</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Comută tema">🌙</button>
+      <a href="#contact" class="btn btn-primary btn-sm">Cere ofertă</a>
+      <button class="hamburger" id="hamburger" aria-label="Meniu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal visible">
+      <span class="eyebrow">🚀 Web Dev Studio</span>
+      <h1>Construim <span class="grad">site-uri și aplicații web</span> rapide, moderne și scalabile</h1>
+      <p class="sub">De la site-uri de prezentare la platforme complexe — totul custom, gândit pentru viteză, conversii și creștere pe termen lung.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Cere ofertă</a>
+        <a href="#contact" class="btn btn-outline">Contactează-ne</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>90+</strong><span>Lighthouse score</span></div>
+        <div><strong>&lt;1s</strong><span>timp de încărcare</span></div>
+        <div><strong>120+</strong><span>proiecte livrate</span></div>
+        <div><strong>98%</strong><span>clienți mulțumiți</span></div>
+      </div>
+    </div>
+    <div class="mockup-wrap reveal visible">
+      <div class="laptop">
+        <div class="bar"><span></span><span></span><span></span></div>
+        <div class="screen"></div>
+      </div>
+      <div class="phone">
+        <div class="screen"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container">
+    <span>STARTUP.RO</span><span>SHOPIFY+</span><span>FINTECH CO</span><span>MEDIA GROUP</span><span>SAAS LABS</span>
+  </div>
+</div>
+
+<!-- SERVICII -->
+<section id="servicii">
+  <div class="container">
+    <span class="eyebrow">Ce facem</span>
+    <h2 class="section-title">Serviciile noastre principale</h2>
+    <p class="section-sub">Alegem tehnologia potrivită pentru fiecare proiect, dar ne concentrăm mereu pe rezultatul pe care îl obții tu.</p>
+    <div class="cards-3">
+      <div class="card reveal">
+        <div class="icon">🖥️</div>
+        <h3>Site-uri de prezentare</h3>
+        <p>Site-uri rapide, optimizate SEO, care transformă vizitatorii în clienți din prima secundă.</p>
+        <ul>
+          <li>Design custom, nu template</li>
+          <li>Optimizare SEO & viteză</li>
+          <li>Responsive 100%</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="icon">🛒</div>
+        <h3>Magazine online</h3>
+        <p>Platforme de e-commerce construite să vândă: checkout rapid, plăți sigure, stocuri automate.</p>
+        <ul>
+          <li>Integrare plăți & curieri</li>
+          <li>Gestiune produse & stoc</li>
+          <li>Scalabil la mii de comenzi</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="icon">⚙️</div>
+        <h3>Aplicații web custom</h3>
+        <p>Platforme și dashboard-uri complexe, construite pe măsura fluxurilor de business ale companiei tale.</p>
+        <ul>
+          <li>Arhitectură scalabilă</li>
+          <li>API-uri & integrări</li>
+          <li>Panouri de administrare</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICII -->
+<section id="beneficii" class="benefits">
+  <div class="container">
+    <span class="eyebrow">De ce noi</span>
+    <h2 class="section-title">De ce să lucrezi cu noi</h2>
+    <p class="section-sub">Nu vindem tehnologie. Livrăm rezultate măsurabile pentru afacerea ta.</p>
+    <div class="cards-6">
+      <div class="benefit reveal"><div class="icon">⚡</div><div><h3>Viteză mare</h3><p>Lighthouse score 90+, încărcare sub 1 secundă.</p></div></div>
+      <div class="benefit reveal"><div class="icon">🎨</div><div><h3>Design modern</h3><p>Interfețe curate, gândite pentru conversie.</p></div></div>
+      <div class="benefit reveal"><div class="icon">📈</div><div><h3>Scalabilitate</h3><p>Creștem odată cu afacerea ta, fără refactorizări costisitoare.</p></div></div>
+      <div class="benefit reveal"><div class="icon">🔒</div><div><h3>Securitate</h3><p>Cele mai bune practici de securitate, integrate din start.</p></div></div>
+      <div class="benefit reveal"><div class="icon">🛠️</div><div><h3>Suport tehnic</h3><p>Mentenanță continuă și timp de răspuns rapid.</p></div></div>
+      <div class="benefit reveal"><div class="icon">💶</div><div><h3>Prețuri transparente</h3><p>Fără costuri ascunse. Ofertă clară, de la început.</p></div></div>
+    </div>
+
+    <div class="result-banner reveal">
+      <p class="big">Construim aplicații care se încarcă în sub 1 secundă și pot gestiona mii de utilizatori simultan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCES -->
+<section id="proces">
+  <div class="container">
+    <span class="eyebrow">Cum lucrăm</span>
+    <h2 class="section-title">Procesul nostru de lucru</h2>
+    <p class="section-sub">Un proces clar, transparent, în 5 pași — de la idee la lansare și mentenanță.</p>
+    <div class="timeline" id="timeline">
+      <div class="progress-line"></div>
+      <div class="step reveal"><div class="num">1</div><h3>Consultanță</h3><p>Înțelegem obiectivele afacerii tale.</p></div>
+      <div class="step reveal"><div class="num">2</div><h3>Wireframe & design</h3><p>Prototip UX/UI adaptat brandului tău.</p></div>
+      <div class="step reveal"><div class="num">3</div><h3>Dezvoltare</h3><p>Cod curat, arhitectură scalabilă.</p></div>
+      <div class="step reveal"><div class="num">4</div><h3>Testare</h3><p>QA riguros pe toate device-urile.</p></div>
+      <div class="step reveal"><div class="num">5</div><h3>Lansare & mentenanță</h3><p>Go-live și suport continuu.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALE -->
+<section id="testimoniale" style="background:var(--bg-alt);">
+  <div class="container">
+    <span class="eyebrow">Testimoniale</span>
+    <h2 class="section-title">Ce spun clienții noștri</h2>
+    <p class="section-sub">Rezultate reale, de la afaceri reale.</p>
+    <div class="testi-track-wrap">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">„Site-ul nou ne-a crescut conversiile cu 45% în prima lună. Echipă super profesionistă.”</p><div class="testi-person"><div class="avatar">A</div><div><strong>Ana Popescu</strong><span>CEO, StartUp.ro</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">„Aplicația custom ne-a redus timpul de procesare a comenzilor cu 60%. Recomand cu încredere.”</p><div class="testi-person"><div class="avatar">M</div><div><strong>Mihai Ionescu</strong><span>COO, Fintech Co</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">„Cel mai rapid magazin online pe care l-am avut vreodată. Suport excelent post-lansare.”</p><div class="testi-person"><div class="avatar">D</div><div><strong>Diana Radu</strong><span>Founder, Media Group</span></div></div></div>
+        <div class="testi-card"><div class="stars">★★★★★</div><p class="quote">„Comunicare excelentă, deadline-uri respectate și un produs final impecabil.”</p><div class="testi-person"><div class="avatar">V</div><div><strong>Vlad Stanciu</strong><span>CTO, SaaS Labs</span></div></div></div>
+      </div>
+    </div>
+    <div class="testi-controls">
+      <button id="testiPrev">←</button>
+      <button id="testiNext">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- PRETURI -->
+<section id="preturi" class="pricing">
+  <div class="container">
+    <span class="eyebrow">Pachete</span>
+    <h2 class="section-title">Prețuri simple, transparente</h2>
+    <p class="section-sub">Alege pachetul potrivit pentru stadiul afacerii tale — sau cere o ofertă 100% personalizată.</p>
+    <div class="cards-4">
+      <div class="price-card reveal">
+        <h3>Basic</h3>
+        <p style="color:var(--text-muted); font-size:14px;">Site de prezentare</p>
+        <div class="price">€490</div>
+        <ul>
+          <li>Până la 5 pagini</li>
+          <li>Design responsive</li>
+          <li>Optimizare SEO de bază</li>
+          <li>1 lună mentenanță gratuită</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Alege Basic</a>
+      </div>
+      <div class="price-card featured reveal">
+        <h3>Business</h3>
+        <p style="color:var(--text-muted); font-size:14px;">Magazin online</p>
+        <div class="price">€1490</div>
+        <ul>
+          <li>Toate din Basic</li>
+          <li>Integrare plăți & curieri</li>
+          <li>Panou de administrare</li>
+          <li>3 luni mentenanță gratuită</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Alege Business</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Enterprise</h3>
+        <p style="color:var(--text-muted); font-size:14px;">Aplicație web custom</p>
+        <div class="price">€4900</div>
+        <ul>
+          <li>Arhitectură custom</li>
+          <li>API-uri & integrări</li>
+          <li>Scalabilitate ridicată</li>
+          <li>6 luni mentenanță gratuită</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Alege Enterprise</a>
+      </div>
+      <div class="price-card reveal">
+        <h3>Custom</h3>
+        <p style="color:var(--text-muted); font-size:14px;">Proiect personalizat</p>
+        <div class="price">La cerere</div>
+        <ul>
+          <li>Analiză detaliată</li>
+          <li>Buget & timeline flexibil</li>
+          <li>Echipă dedicată</li>
+          <li>SLA personalizat</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Cere ofertă</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container" style="max-width:800px;">
+    <span class="eyebrow">Întrebări frecvente</span>
+    <h2 class="section-title">FAQ</h2>
+    <div id="faqList">
+      <div class="faq-item open">
+        <div class="faq-q"><span>Cât durează dezvoltarea unui site?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>În funcție de complexitate, un site de prezentare durează 2-3 săptămâni, iar o aplicație custom între 6-12 săptămâni.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Oferiți mentenanță după lansare?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Da, toate pachetele includ o perioadă de mentenanță gratuită, iar ulterior oferim abonamente flexibile de suport.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Pot cere modificări în timpul dezvoltării?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Absolut. Lucrăm iterativ și îți prezentăm progresul la fiecare etapă, pentru feedback rapid.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span>Ce tehnologii folosiți?</span><span class="plus">+</span></div>
+        <div class="faq-a"><p>Alegem stack-ul potrivit fiecărui proiect (React, Next.js, Node.js etc.), mereu cu focus pe viteză și scalabilitate.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--bg-alt);">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h2 class="section-title">Hai să discutăm despre proiectul tău</h2>
+    <p class="section-sub">Completează formularul sau contactează-ne direct — răspundem în cel mult 24h.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="item reveal"><div class="icon">📧</div><div><h3>Email</h3><p>contact@webforge.ro</p></div></div>
+        <div class="item reveal"><div class="icon">📞</div><div><h3>Telefon</h3><p>+40 700 000 000</p></div></div>
+        <div class="item reveal"><div class="icon">💬</div><div><h3>WhatsApp</h3><p>Chat instant cu echipa noastră</p></div></div>
+        <div class="item reveal"><div class="icon">🕒</div><div><h3>Program</h3><p>Luni – Vineri, 09:00 – 18:00</p></div></div>
+      </div>
+      <form class="reveal" onsubmit="event.preventDefault(); alert('Mulțumim! Te vom contacta în curând.'); this.reset();">
+        <label>Nume</label>
+        <input type="text" placeholder="Numele tău" required>
+        <label>Email</label>
+        <input type="email" placeholder="email@exemplu.com" required>
+        <label>Mesaj</label>
+        <textarea rows="4" placeholder="Spune-ne despre proiectul tău..." required></textarea>
+        <button type="submit" class="btn btn-primary">Trimite mesajul</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 WebForge. Toate drepturile rezervate.
+  </div>
+</footer>
+
+<a href="#contact" class="btn btn-primary float-cta">💬 Cere ofertă</a>
+
+<div class="social-sidebar">
+  <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.46 1.49-1.46H16.5V4.36C16.24 4.32 15.32 4.24 14.25 4.24c-2.23 0-3.75 1.36-3.75 3.86v2.4H8v3h2.5V21h3z"/></svg>
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c2.7 0 3 .01 4.1.06 1.05.05 1.6.22 2 .37.5.19.86.42 1.24.8.38.38.6.74.8 1.24.15.4.32.95.37 2 .05 1.1.06 1.4.06 4.1s-.01 3-.06 4.1c-.05 1.05-.22 1.6-.37 2-.2.5-.42.86-.8 1.24-.38.38-.74.6-1.24.8-.4.15-.95.32-2 .37-1.1.05-1.4.06-4.1.06s-3-.01-4.1-.06c-1.05-.05-1.6-.22-2-.37-.5-.2-.86-.42-1.24-.8-.38-.38-.6-.74-.8-1.24-.15-.4-.32-.95-.37-2-.05-1.1-.06-1.4-.06-4.1s.01-3 .06-4.1c.05-1.05.22-1.6.37-2 .2-.5.42-.86.8-1.24.38-.38.74-.6 1.24-.8.4-.15.95-.32 2-.37 1.1-.05 1.4-.06 4.1-.06M12 0C9.25 0 8.9.01 7.8.06c-1.1.05-1.85.23-2.5.48-.68.26-1.26.62-1.83 1.19-.57.57-.93 1.15-1.19 1.83-.25.65-.43 1.4-.48 2.5C1.75 7.1 1.74 7.45 1.74 10.2v3.6c0 2.75.01 3.1.06 4.2.05 1.1.23 1.85.48 2.5.26.68.62 1.26 1.19 1.83.57.57 1.15.93 1.83 1.19.65.25 1.4.43 2.5.48 1.1.05 1.45.06 4.2.06s3.1-.01 4.2-.06c1.1-.05 1.85-.23 2.5-.48.68-.26 1.26-.62 1.83-1.19.57-.57.93-1.15 1.19-1.83.25-.65.43-1.4.48-2.5.05-1.1.06-1.45.06-4.2s-.01-3.1-.06-4.2c-.05-1.1-.23-1.85-.48-2.5-.26-.68-.62-1.26-1.19-1.83A5.03 5.03 0 0 0 19.8.54c-.65-.25-1.4-.43-2.5-.48C16.1.01 15.75 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+  </a>
+  <a href="https://tiktok.com" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-1.1-.9-1.8-2.27-1.8-3.8h-3.14v13.4a2.9 2.9 0 1 1-2.05-2.77V9.4a6.06 6.06 0 1 0 5.19 6v-6.4a7.4 7.4 0 0 0 4.3 1.37V7.2a4.85 4.85 0 0 1-2.5-1.38z"/></svg>
+  </a>
+  <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+  </a>
+</div>
+
+<script>
+  // Theme toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+  function setTheme(t){
+    body.setAttribute('data-theme', t);
+    themeToggle.textContent = t === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('theme', t);
+  }
+  const saved = localStorage.getItem('theme') || 'dark';
+  setTheme(saved);
+  themeToggle.addEventListener('click', () => {
+    setTheme(body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  // Mobile nav toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const navOverlay = document.getElementById('navOverlay');
+  function closeMenu(){
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    navOverlay.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  function toggleMenu(){
+    const isOpen = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    navOverlay.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  hamburger.addEventListener('click', toggleMenu);
+  navOverlay.addEventListener('click', closeMenu);
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  window.addEventListener('resize', () => { if(window.innerWidth > 960) closeMenu(); });
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Timeline animation
+  const timeline = document.getElementById('timeline');
+  const timelineIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        timeline.classList.add('animate');
+        setTimeout(() => {
+          const lastNum = timeline.querySelector('.step:last-child .num');
+          if(lastNum) lastNum.classList.add('pulse');
+        }, 1600);
+        timelineIo.unobserve(timeline);
+      }
+    });
+  }, { threshold: 0.3 });
+  timelineIo.observe(timeline);
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    if(item.classList.contains('open')) a.style.maxHeight = a.scrollHeight + 'px';
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
+      if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+    });
+  });
+
+  // Testimonials slider
+  const track = document.getElementById('testiTrack');
+  const cards = track.children.length;
+  let visible = window.innerWidth <= 960 ? 1 : 3;
+  let index = 0;
+  function updateSlider(){
+    visible = window.innerWidth <= 960 ? 1 : 3;
+    const maxIndex = Math.max(0, cards - visible);
+    if(index > maxIndex) index = maxIndex;
+    const pct = (100 / visible) * index;
+    track.style.transform = `translateX(-${pct}%)`;
+  }
+  document.getElementById('testiNext').addEventListener('click', () => {
+    const maxIndex = Math.max(0, cards - visible);
+    index = index >= maxIndex ? 0 : index + 1;
+    updateSlider();
+  });
+  document.getElementById('testiPrev').addEventListener('click', () => {
+    const maxIndex = Math.max(0, cards - visible);
+    index = index <= 0 ? maxIndex : index - 1;
+    updateSlider();
+  });
+  window.addEventListener('resize', updateSlider);
+  updateSlider();
+</script>
+</body>
+</html>
