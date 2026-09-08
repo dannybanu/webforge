@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.webforge.tm.ro/</loc>
+    <loc>https://dannybanu.github.io/webforge/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.webforge.tm.ro/#servicii</loc>
+    <loc>https://dannybanu.github.io/webforge/#servicii</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.webforge.tm.ro/#beneficii</loc>
+    <loc>https://dannybanu.github.io/webforge/#beneficii</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.webforge.tm.ro/#proces</loc>
+    <loc>https://dannybanu.github.io/webforge/#proces</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.webforge.tm.ro/#preturi</loc>
+    <loc>https://dannybanu.github.io/webforge/#preturi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.webforge.tm.ro/#faq</loc>
+    <loc>https://dannybanu.github.io/webforge/#faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.webforge.tm.ro/#contact</loc>
+    <loc>https://dannybanu.github.io/webforge/#contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

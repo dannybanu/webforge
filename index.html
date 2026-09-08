@@ -12,27 +12,27 @@
 <meta name="language" content="Romanian">
 <meta name="geo.region" content="RO">
 <meta name="theme-color" content="#5b5bf5">
-<link rel="canonical" href="https://www.webforge.tm.ro/">
-<link rel="icon" type="image/png" href="/assets/logo.png">
-<link rel="apple-touch-icon" href="/assets/logo.png">
+<link rel="canonical" href="https://dannybanu.github.io/webforge/">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.webforge.tm.ro/">
+<meta property="og:url" content="https://dannybanu.github.io/webforge/">
 <meta property="og:site_name" content="WebForge">
 <meta property="og:locale" content="ro_RO">
 <meta property="og:title" content="WebForge — Creare Site-uri și Aplicații Web Rapide, Moderne, Scalabile">
 <meta property="og:description" content="Construim site-uri de prezentare, magazine online și aplicații web custom, rapide și scalabile. Cere o ofertă gratuită.">
-<meta property="og:image" content="https://www.webforge.tm.ro/assets/logo.png">
+<meta property="og:image" content="https://dannybanu.github.io/webforge/assets/logo.png">
 <meta property="og:image:width" content="882">
 <meta property="og:image:height" content="202">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.webforge.tm.ro/">
+<meta name="twitter:url" content="https://dannybanu.github.io/webforge/">
 <meta name="twitter:title" content="WebForge — Creare Site-uri și Aplicații Web Rapide, Moderne, Scalabile">
 <meta name="twitter:description" content="Construim site-uri de prezentare, magazine online și aplicații web custom, rapide și scalabile.">
-<meta name="twitter:image" content="https://www.webforge.tm.ro/assets/logo.png">
+<meta name="twitter:image" content="https://dannybanu.github.io/webforge/assets/logo.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,8 +43,8 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "WebForge",
-  "url": "https://www.webforge.tm.ro/",
-  "logo": "https://www.webforge.tm.ro/assets/logo.png",
+  "url": "https://dannybanu.github.io/webforge/",
+  "logo": "https://dannybanu.github.io/webforge/assets/logo.png",
   "description": "Agenție de dezvoltare web: site-uri de prezentare, magazine online și aplicații web custom.",
   "email": "contact@webforge.ro",
   "telephone": "+40700000000",
@@ -53,10 +53,10 @@
     "addressCountry": "RO"
   },
   "sameAs": [
+    "https://linkedin.com",
     "https://facebook.com",
     "https://instagram.com",
-    "https://tiktok.com",
-    "https://youtube.com"
+    "https://tiktok.com"
   ]
 }
 </script>
@@ -65,7 +65,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "WebForge",
-  "url": "https://www.webforge.tm.ro/",
+  "url": "https://dannybanu.github.io/webforge/",
   "inLanguage": "ro-RO"
 }
 </script>
@@ -236,10 +236,6 @@
   .hero h1 .grad{background:var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent;}
   .hero p.sub{font-size:19px; color:var(--text-muted); margin-bottom:34px; max-width:520px;}
   .hero-ctas{display:flex; gap:16px; margin-bottom:40px; flex-wrap:wrap;}
-  .hero-stats{display:flex; gap:36px; flex-wrap:wrap;}
-  .hero-stats div{display:flex; flex-direction:column;}
-  .hero-stats strong{font-size:26px; font-weight:800;}
-  .hero-stats span{font-size:13px; color:var(--text-muted);}
 
   /* Device mockup */
   .mockup-wrap{position:relative; display:flex; justify-content:center; align-items:center;}
@@ -492,7 +488,6 @@
     .hero{padding:150px 0 70px;}
     .hero-ctas{flex-direction:column; align-items:stretch;}
     .hero-ctas .btn{width:100%;}
-    .hero-stats{gap:22px; justify-content:space-between;}
     .cards-3,.cards-6,.cards-4{grid-template-columns:1fr;}
     .timeline{grid-template-columns:1fr;}
     section{padding:64px 0;}
@@ -501,8 +496,6 @@
     .float-cta{bottom:16px; right:16px; padding:12px 18px; font-size:14px;}
   }
   @media (max-width:420px){
-    .hero-stats{gap:16px;}
-    .hero-stats strong{font-size:22px;}
     .nav-actions .btn-sm{display:none;}
     .price-card,.card,.benefit{padding:24px 20px;}
   }
@@ -542,12 +535,6 @@
       <div class="hero-ctas">
         <a href="#contact" class="btn btn-primary">Cere ofertă</a>
         <a href="#contact" class="btn btn-outline">Contactează-ne</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>90+</strong><span>Lighthouse score</span></div>
-        <div><strong>&lt;1s</strong><span>timp de încărcare</span></div>
-        <div><strong>120+</strong><span>proiecte livrate</span></div>
-        <div><strong>98%</strong><span>clienți mulțumiți</span></div>
       </div>
     </div>
     <div class="mockup-wrap reveal visible">
@@ -788,6 +775,9 @@
 <a href="#contact" class="btn btn-primary float-cta">💬 Cere ofertă</a>
 
 <div class="social-sidebar">
+  <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+  </a>
   <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3h-3V8.5c0-.87.24-1.46 1.49-1.46H16.5V4.36C16.24 4.32 15.32 4.24 14.25 4.24c-2.23 0-3.75 1.36-3.75 3.86v2.4H8v3h2.5V21h3z"/></svg>
   </a>
@@ -796,9 +786,6 @@
   </a>
   <a href="https://tiktok.com" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82c-1.1-.9-1.8-2.27-1.8-3.8h-3.14v13.4a2.9 2.9 0 1 1-2.05-2.77V9.4a6.06 6.06 0 1 0 5.19 6v-6.4a7.4 7.4 0 0 0 4.3 1.37V7.2a4.85 4.85 0 0 1-2.5-1.38z"/></svg>
-  </a>
-  <a href="https://youtube.com" target="_blank" rel="noopener" title="YouTube" aria-label="YouTube">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
   </a>
 </div>
 
