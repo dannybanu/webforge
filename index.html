@@ -634,7 +634,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALE -->
+<!-- TESTIMONIALE (dezactivat temporar — se va reactiva ulterior)
 <section id="testimoniale" style="background:var(--bg-alt);">
   <div class="container">
     <span class="eyebrow">Testimoniale</span>
@@ -654,6 +654,7 @@
     </div>
   </div>
 </section>
+-->
 
 <!-- PRETURI -->
 <section id="preturi" class="pricing">
@@ -864,28 +865,30 @@
 
   // Testimonials slider
   const track = document.getElementById('testiTrack');
-  const cards = track.children.length;
-  let visible = window.innerWidth <= 960 ? 1 : 3;
-  let index = 0;
-  function updateSlider(){
-    visible = window.innerWidth <= 960 ? 1 : 3;
-    const maxIndex = Math.max(0, cards - visible);
-    if(index > maxIndex) index = maxIndex;
-    const pct = (100 / visible) * index;
-    track.style.transform = `translateX(-${pct}%)`;
+  if(track){
+    const cards = track.children.length;
+    let visible = window.innerWidth <= 960 ? 1 : 3;
+    let index = 0;
+    function updateSlider(){
+      visible = window.innerWidth <= 960 ? 1 : 3;
+      const maxIndex = Math.max(0, cards - visible);
+      if(index > maxIndex) index = maxIndex;
+      const pct = (100 / visible) * index;
+      track.style.transform = `translateX(-${pct}%)`;
+    }
+    document.getElementById('testiNext').addEventListener('click', () => {
+      const maxIndex = Math.max(0, cards - visible);
+      index = index >= maxIndex ? 0 : index + 1;
+      updateSlider();
+    });
+    document.getElementById('testiPrev').addEventListener('click', () => {
+      const maxIndex = Math.max(0, cards - visible);
+      index = index <= 0 ? maxIndex : index - 1;
+      updateSlider();
+    });
+    window.addEventListener('resize', updateSlider);
+    updateSlider();
   }
-  document.getElementById('testiNext').addEventListener('click', () => {
-    const maxIndex = Math.max(0, cards - visible);
-    index = index >= maxIndex ? 0 : index + 1;
-    updateSlider();
-  });
-  document.getElementById('testiPrev').addEventListener('click', () => {
-    const maxIndex = Math.max(0, cards - visible);
-    index = index <= 0 ? maxIndex : index - 1;
-    updateSlider();
-  });
-  window.addEventListener('resize', updateSlider);
-  updateSlider();
 </script>
 </body>
 </html>
