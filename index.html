@@ -270,6 +270,10 @@
 
   /* SERVICES */
   .cards-3{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .cards-services{grid-template-columns:repeat(4,1fr);}
+  @media (min-width:961px) and (max-width:1200px){
+    .cards-services{grid-template-columns:repeat(2,1fr);}
+  }
   .card{
     background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
     padding:36px 30px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
@@ -561,7 +565,7 @@
     <span class="eyebrow">Ce facem</span>
     <h2 class="section-title">Serviciile noastre principale</h2>
     <p class="section-sub">Alegem tehnologia potrivită pentru fiecare proiect, dar ne concentrăm mereu pe rezultatul pe care îl obții tu.</p>
-    <div class="cards-3">
+    <div class="cards-3 cards-services">
       <div class="card reveal">
         <div class="icon">🖥️</div>
         <h3>Site-uri de prezentare</h3>
@@ -590,6 +594,16 @@
           <li>Arhitectură scalabilă</li>
           <li>API-uri & integrări</li>
           <li>Panouri de administrare</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="icon">🎬</div>
+        <h3>Platforme media</h3>
+        <p>Platforme de streaming și conținut media construite pentru performanță și audiențe mari.</p>
+        <ul>
+          <li>Streaming video/audio optimizat</li>
+          <li>Gestiune conținut & CDN</li>
+          <li>Scalabil la trafic ridicat</li>
         </ul>
       </div>
     </div>
