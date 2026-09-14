@@ -424,6 +424,8 @@
 
   /* CONTACT */
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start;}
+  .contact-grid-single{grid-template-columns:1fr; justify-items:center;}
+  .contact-grid-single form{width:100%; max-width:560px;}
   .contact-info .item{display:flex; gap:14px; align-items:flex-start; margin-bottom:26px;}
   .contact-info .icon{
     width:44px; height:44px; border-radius:12px; background:var(--accent-grad); flex-shrink:0;
@@ -432,11 +434,15 @@
   .contact-info h3{font-size:15px; font-weight:700; margin-bottom:2px;}
   .contact-info p{font-size:14px; color:var(--text-muted);}
   form{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:34px; display:flex; flex-direction:column; gap:16px;}
-  form input, form textarea{
+  form input, form textarea, form select{
     width:100%; padding:14px 16px; border-radius:10px; border:1px solid var(--border);
     background:var(--bg); color:var(--text); font-family:inherit; font-size:14px;
   }
-  form input:focus, form textarea:focus{outline:2px solid var(--accent);}
+  form select{cursor:pointer; appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235b5f6b' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat:no-repeat; background-position:right 14px center;
+  }
+  form input:focus, form textarea:focus, form select:focus{outline:2px solid var(--accent);}
   form label{font-size:13px; font-weight:600; margin-bottom:-8px; color:var(--text-muted);}
 
   footer{border-top:1px solid var(--border); padding:40px 0; text-align:center; color:var(--text-muted); font-size:14px;}
@@ -762,22 +768,36 @@
   <div class="container">
     <span class="eyebrow">Contact</span>
     <h2 class="section-title">Hai să discutăm despre proiectul tău</h2>
-    <p class="section-sub">Completează formularul sau contactează-ne direct — răspundem în cel mult 24h.</p>
-    <div class="contact-grid">
+    <p class="section-sub">Spune-ne câteva detalii despre proiect și pachetul dorit — te contactăm în cel mult 24h cu o ofertă personalizată.</p>
+    <div class="contact-grid contact-grid-single">
+      <!-- CONTACT INFO (dezactivat temporar — se va reactiva ulterior)
       <div class="contact-info">
         <div class="item reveal"><div class="icon">📧</div><div><h3>Email</h3><p>contact@webforge.ro</p></div></div>
         <div class="item reveal"><div class="icon">📞</div><div><h3>Telefon</h3><p>+40 700 000 000</p></div></div>
         <div class="item reveal"><div class="icon">💬</div><div><h3>WhatsApp</h3><p>Chat instant cu echipa noastră</p></div></div>
         <div class="item reveal"><div class="icon">🕒</div><div><h3>Program</h3><p>Luni – Vineri, 09:00 – 18:00</p></div></div>
       </div>
-      <form class="reveal" onsubmit="event.preventDefault(); alert('Mulțumim! Te vom contacta în curând.'); this.reset();">
+      -->
+      <form class="reveal" id="contactForm" action="https://formsubmit.co/ajax/danielbanu.tgv@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Cerere ofertă nouă — WebForge">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         <label>Nume</label>
-        <input type="text" placeholder="Numele tău" required>
+        <input type="text" name="name" placeholder="Numele tău" required>
         <label>Email</label>
-        <input type="email" placeholder="email@exemplu.com" required>
+        <input type="email" name="email" placeholder="email@exemplu.com" required>
+        <label>Alege pachetul</label>
+        <select name="pachet" required>
+          <option value="" disabled selected>Selectează un pachet</option>
+          <option value="Basic">Basic</option>
+          <option value="Business">Business</option>
+          <option value="Enterprise">Enterprise</option>
+          <option value="Custom">Custom</option>
+        </select>
         <label>Mesaj</label>
-        <textarea rows="4" placeholder="Spune-ne despre proiectul tău..." required></textarea>
+        <textarea rows="4" name="message" placeholder="Spune-ne despre proiectul tău..." required></textarea>
         <button type="submit" class="btn btn-primary">Trimite mesajul</button>
+        <p id="formStatus" style="font-size:13px; color:var(--text-muted); margin-top:-6px;"></p>
       </form>
     </div>
   </div>
@@ -807,6 +827,39 @@
 </div>
 
 <script>
+  // Contact form submission (FormSubmit, no backend needed)
+  const contactForm = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Se trimite...';
+      formStatus.textContent = '';
+      try{
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(contactForm)
+        });
+        if(res.ok){
+          formStatus.style.color = 'var(--accent-2)';
+          formStatus.textContent = 'Mulțumim! Mesajul a fost trimis, te vom contacta în curând.';
+          contactForm.reset();
+        } else {
+          throw new Error('Send failed');
+        }
+      } catch(err){
+        formStatus.style.color = '#e05555';
+        formStatus.textContent = 'A apărut o eroare la trimitere. Încearcă din nou sau scrie-ne direct pe email.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Trimite mesajul';
+      }
+    });
+  }
+
   // Theme toggle
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
