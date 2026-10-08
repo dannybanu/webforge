@@ -512,49 +512,47 @@
   /* Intro animation */
   #intro{position:fixed; inset:0; z-index:99999; background:#070916; display:flex; align-items:center; justify-content:center; transition:opacity .6s ease, visibility .6s;}
   #intro.hide{opacity:0; visibility:hidden; pointer-events:none;}
-  #intro .stage{display:grid; grid-template-columns:1fr 1.2fr; gap:20px; width:min(1000px,92vw); transition:opacity .5s ease, transform .5s ease;}
-  #intro.final .stage{opacity:0; transform:scale(.96);}
-  .ide,.pv{background:#0f1226; border:1px solid rgba(124,124,255,.35); border-radius:14px; overflow:hidden; box-shadow:0 20px 60px rgba(91,91,245,.25); height:min(52vh,380px); display:flex; flex-direction:column;}
-  .bar{display:flex; gap:7px; padding:11px 14px; background:#171a34;}
-  .bar i{width:11px; height:11px; border-radius:50%; background:#ff5f57;}
+  #intro .layer{position:absolute; inset:0; transition:opacity .45s ease;}
+  #codeLayer{display:flex; flex-direction:column; background:#0b0e22; opacity:0; pointer-events:none;}
+  #codeLayer.on{opacity:1;}
+  .bar{display:flex; gap:9px; padding:16px 22px; background:#171a34;}
+  .bar i{width:14px; height:14px; border-radius:50%; background:#ff5f57;}
   .bar i:nth-child(2){background:#febc2e;} .bar i:nth-child(3){background:#28c840;}
-  #introCode{margin:0; padding:16px; font:13px/1.6 Consolas,Menlo,monospace; color:#b9c0ff; white-space:pre-wrap; overflow:hidden; flex:1;}
+  #introCode{margin:0; padding:5vh 6vw; font:clamp(16px,3.2vw,38px)/1.7 Consolas,Menlo,monospace; color:#b9c0ff; white-space:pre-wrap; overflow:hidden; flex:1;}
   #introCode::after{content:"▋"; color:#a78bfa; animation:blink .7s steps(1) infinite;}
   @keyframes blink{50%{opacity:0}}
-  .pv-body{flex:1; padding:12px; background:#fff; display:flex; flex-direction:column; gap:10px; overflow:hidden; position:relative;}
-  .pv-body>*{opacity:0; transform:translateY(14px) scale(.97); transition:opacity .5s ease, transform .5s ease;}
-  .pv-body>.on{opacity:1; transform:none;}
-  .pv-nav{display:flex; align-items:center; gap:8px; padding:6px 8px; background:#eef0ff; border-radius:8px;}
-  .pv-nav img{height:22px;} .pv-nav b{height:16px; width:38px; border:1.5px solid #5b5bf5; border-radius:6px;}
-  .pv-hero{height:46px; border-radius:8px; background:linear-gradient(135deg,#5b5bf5,#a78bfa);}
-  .pv-cards{display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
-  .pv-cards i{height:54px; border-radius:8px; background:#e4e7ff; border-top:4px solid #7c5cff;}
-  .pv-form{display:grid; gap:6px;} .pv-form i{height:14px; border-radius:5px; background:#e4e7ff;} .pv-form u{height:18px; width:40%; border-radius:6px; background:linear-gradient(135deg,#5b5bf5,#a78bfa);}
+  #viewLayer{background:radial-gradient(circle at 50% 30%,#171a40,#070916 70%); display:flex; flex-direction:column; align-items:center; gap:5vh; padding:4vh 5vw; overflow:hidden;}
+  #viewLayer>*{opacity:0; transform:translateY(24px) scale(.97); transition:opacity .6s ease, transform .6s ease;}
+  #viewLayer>.on{opacity:1; transform:none;}
+  .pv-nav{width:100%; display:flex; align-items:center; gap:2vw; padding:2vh 2.5vw; background:rgba(124,124,255,.14); border:1px solid rgba(124,124,255,.4); border-radius:16px;}
+  .pv-nav img{height:clamp(32px,7vh,64px);} .pv-nav b{height:clamp(22px,4.5vh,38px); flex:0 0 clamp(50px,9vw,120px); border:2px solid #7c7cff; border-radius:10px;}
+  .pv-nav b:first-of-type{margin-left:auto;}
+  .pv-hero{width:100%; flex:0 0 14vh; border-radius:16px; background:linear-gradient(135deg,#5b5bf5,#a78bfa);}
+  .pv-cards{width:100%; display:grid; grid-template-columns:repeat(4,1fr); gap:2vw; flex:1;}
+  .pv-cards i{border-radius:16px; background:rgba(124,124,255,.16); border:1px solid rgba(124,124,255,.4); border-top:6px solid #a78bfa; min-height:18vh;}
+  .pv-form{width:min(700px,100%); display:grid; gap:2vh; margin-top:4vh;} .pv-form i{height:7vh; border-radius:12px; background:rgba(124,124,255,.16); border:1px solid rgba(124,124,255,.4);} .pv-form u{height:8vh; width:45%; border-radius:12px; background:linear-gradient(135deg,#5b5bf5,#a78bfa);}
   #intro .flash{position:absolute; inset:0; background:#fff; opacity:0; pointer-events:none;}
   #intro .flash.go{animation:flash .45s ease;}
   @keyframes flash{0%{opacity:.55}100%{opacity:0}}
   #introLogo{position:absolute; opacity:0; transform:scale(.6); transition:opacity .7s ease, transform .9s cubic-bezier(.2,1.4,.4,1); width:min(560px,80vw); filter:drop-shadow(0 0 30px rgba(124,92,255,.7));}
   #intro.final #introLogo{opacity:1; transform:scale(1);}
+  #intro.final .layer{opacity:0;}
   #introSkip{position:absolute; top:18px; right:18px; background:transparent; color:#b9c0ff; border:1px solid rgba(185,192,255,.4); border-radius:999px; padding:8px 16px; cursor:pointer; font:inherit; font-size:13px;}
   #introSkip:hover{background:rgba(124,124,255,.2);}
   body.intro-lock{overflow:hidden;}
-  @media (max-width:700px){#intro .stage{grid-template-columns:1fr;} .ide,.pv{height:26vh;} #introCode{font-size:11px; padding:10px;}}
+  @media (max-width:700px){.pv-cards{grid-template-columns:repeat(2,1fr);} .pv-nav b:nth-of-type(n+3){display:none;}}
 </style>
 </head>
 <body data-theme="dark" class="intro-lock">
 
 <div id="intro" aria-hidden="true">
-  <div class="stage">
-    <div class="ide"><div class="bar"><i></i><i></i><i></i></div><pre id="introCode"></pre></div>
-    <div class="pv"><div class="bar"><i></i><i></i><i></i></div>
-      <div class="pv-body">
-        <div class="pv-nav" id="pv1"><img src="assets/logo.png" alt=""><b></b><b></b><b></b><b></b></div>
-        <div class="pv-hero" id="pv2"></div>
-        <div class="pv-cards" id="pv3"><i></i><i></i><i></i><i></i></div>
-        <div class="pv-form" id="pv4"><i></i><i></i><u></u></div>
-      </div>
-    </div>
+  <div class="layer" id="viewLayer">
+    <div class="pv-nav" id="pv1"><img src="assets/logo.png" alt=""><b></b><b></b><b></b><b></b></div>
+    <div class="pv-hero" id="pv2"></div>
+    <div class="pv-cards" id="pv3"><i></i><i></i><i></i><i></i></div>
+    <div class="pv-form" id="pv4"><i></i><i></i><u></u></div>
   </div>
+  <div class="layer" id="codeLayer"><div class="bar"><i></i><i></i><i></i></div><pre id="introCode"></pre></div>
   <img id="introLogo" src="assets/logo.png" alt="WebForge">
   <div class="flash" id="introFlash"></div>
   <button id="introSkip" type="button">Sari peste ›</button>
@@ -564,10 +562,11 @@
   var intro=document.getElementById('intro'), code=document.getElementById('introCode'), flash=document.getElementById('introFlash');
   var done=false, timers=[], raf;
   var steps=[
-    {t:0,d:2700,text:'<header>\n  <nav class="navbar">\n    <img src="logo.png">\n    <a>Servicii</a> <a>Prețuri</a>\n  </nav>\n</header>',show:['pv1']},
-    {t:3000,d:2700,text:'<section class="oferta">\n  <h1>Site-uri rapide</h1>\n  <div class="card">Site-uri</div>\n  <div class="card">Magazine</div>\n  <div class="card">Aplicații</div>\n</section>',show:['pv2','pv3']},
-    {t:6000,d:1900,text:'<form id="contact">\n  <input name="mesaj">\n  <button>Trimite</button>\n</form>',show:['pv4']}
+    {t:0,d:1900,text:'<header>\n  <nav class="navbar">\n    <img src="logo.png">\n    <a>Servicii</a>\n    <a>Prețuri</a>\n    <a>Contact</a>\n  </nav>\n</header>',show:['pv1']},
+    {t:3300,d:1900,text:'<section class="oferta">\n  <h1>Site-uri rapide</h1>\n  <div class="card">Site-uri</div>\n  <div class="card">Magazine</div>\n  <div class="card">Aplicații</div>\n</section>',show:['pv2','pv3']},
+    {t:6600,d:1500,text:'<form id="contact">\n  <input name="mesaj">\n  <button>Trimite</button>\n</form>',show:['pv4'],hide:['pv2','pv3']}
   ];
+  var codeLayer=document.getElementById('codeLayer');
   function typeText(s){
     var start=performance.now();
     cancelAnimationFrame(raf);
@@ -585,14 +584,15 @@
     setTimeout(function(){intro.remove();},800);
   }
   steps.forEach(function(s){
-    timers.push(setTimeout(function(){code.textContent=''; typeText(s);},s.t));
+    timers.push(setTimeout(function(){code.textContent=''; codeLayer.classList.add('on'); typeText(s);},s.t));
     timers.push(setTimeout(function(){
-      doFlash();
+      doFlash(); codeLayer.classList.remove('on');
+      (s.hide||[]).forEach(function(id){document.getElementById(id).classList.remove('on');});
       s.show.forEach(function(id){document.getElementById(id).classList.add('on');});
-    },s.t+s.d+200));
+    },s.t+s.d+300));
   });
-  timers.push(setTimeout(function(){doFlash(); intro.classList.add('final');},8300));
-  timers.push(setTimeout(finish,10600));
+  timers.push(setTimeout(function(){doFlash(); intro.classList.add('final');},9300));
+  timers.push(setTimeout(finish,11600));
   document.getElementById('introSkip').addEventListener('click',finish);
 })();
 </script>
