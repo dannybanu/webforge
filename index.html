@@ -535,6 +535,10 @@
   .pv-cards{width:100%; display:grid; grid-template-columns:repeat(4,1fr); gap:2vw; flex:1;}
   .pv-cards i{border-radius:16px; background:rgba(124,124,255,.16); border:1px solid rgba(124,124,255,.4); border-top:6px solid #a78bfa; min-height:18vh;}
   .pv-form{width:min(700px,100%); display:grid; gap:2vh; margin-top:4vh;} .pv-form i{height:7vh; border-radius:12px; background:rgba(124,124,255,.16); border:1px solid rgba(124,124,255,.4);} .pv-form u{height:8vh; width:45%; border-radius:12px; background:linear-gradient(135deg,#5b5bf5,#a78bfa);}
+  #introTitle{position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; pointer-events:none; opacity:0; animation:titleIn 2.3s ease forwards;}
+  #introTitle small{font-size:clamp(14px,2.6vw,30px); letter-spacing:.5em; text-transform:uppercase; color:#b9c0ff; margin-bottom:2vh;}
+  #introTitle strong{font-size:clamp(44px,13vw,170px); line-height:1; font-weight:800; background:linear-gradient(135deg,#6d6dff,#c4a8ff); -webkit-background-clip:text; background-clip:text; color:transparent; filter:drop-shadow(0 0 30px rgba(124,92,255,.6));}
+  @keyframes titleIn{0%{opacity:0; filter:blur(18px); letter-spacing:.4em; transform:scale(1.12);}30%{opacity:1; filter:blur(0); letter-spacing:.06em; transform:scale(1);}75%{opacity:1; filter:blur(0); transform:scale(1);}100%{opacity:0; filter:blur(14px); transform:scale(.96);}}
   #intro .flash{position:absolute; inset:0; background:radial-gradient(circle,rgba(167,139,250,.5),rgba(91,91,245,.15) 60%,transparent 80%); opacity:0; pointer-events:none;}
   #intro .flash.go{animation:flash 1.2s ease;}
   @keyframes flash{0%{opacity:0}30%{opacity:.7}100%{opacity:0}}
@@ -559,6 +563,7 @@
     <div class="pv-form" id="pv4"><i></i><i></i><u></u></div>
   </div>
   <div class="layer" id="codeLayer"><div class="bar"><i></i><i></i><i></i></div><pre id="introCode"></pre></div>
+  <div id="introTitle"><small>Welcome to the</small><strong>WEB LAB</strong></div>
   <img id="introLogo" src="assets/logo.png" alt="WebForge">
   <div class="flash" id="introFlash"></div>
   <button id="introSkip" type="button">Sari peste ›</button>
@@ -568,9 +573,9 @@
   var intro=document.getElementById('intro'), code=document.getElementById('introCode'), flash=document.getElementById('introFlash');
   var done=false, timers=[], raf;
   var steps=[
-    {t:0,d:1900,text:'<header>\n  <nav class="navbar">\n    <img src="logo.png">\n    <a>Servicii</a>\n    <a>Prețuri</a>\n    <a>Contact</a>\n  </nav>\n</header>',show:['pv1']},
-    {t:3300,d:1900,text:'<section class="oferta">\n  <h1>Site-uri rapide</h1>\n  <div class="card">Site-uri</div>\n  <div class="card">Magazine</div>\n  <div class="card">Aplicații</div>\n</section>',show:['pv2','pv3']},
-    {t:6600,d:1500,text:'<form id="contact">\n  <input name="mesaj">\n  <button>Trimite</button>\n</form>',show:['pv4'],hide:['pv2','pv3']}
+    {t:2200,d:1300,text:'<header>\n  <nav class="navbar">\n    <img src="logo.png">\n    <a>Servicii</a>\n    <a>Prețuri</a>\n    <a>Contact</a>\n  </nav>\n</header>',show:['pv1']},
+    {t:4400,d:1300,text:'<section class="oferta">\n  <h1>Site-uri rapide</h1>\n  <div class="card">Site-uri</div>\n  <div class="card">Magazine</div>\n  <div class="card">Aplicații</div>\n</section>',show:['pv2','pv3']},
+    {t:6600,d:1000,text:'<form id="contact">\n  <input name="mesaj">\n  <button>Trimite</button>\n</form>',show:['pv4'],hide:['pv2','pv3']}
   ];
   var codeLayer=document.getElementById('codeLayer');
   function typeText(s){
@@ -595,9 +600,9 @@
       doFlash(); codeLayer.classList.remove('on');
       (s.hide||[]).forEach(function(id){document.getElementById(id).classList.remove('on');});
       s.show.forEach(function(id){document.getElementById(id).classList.add('on');});
-    },s.t+s.d+300));
+    },s.t+s.d+200));
   });
-  timers.push(setTimeout(function(){doFlash(); intro.classList.add('final');},9400));
+  timers.push(setTimeout(function(){doFlash(); intro.classList.add('final');},8500));
   timers.push(setTimeout(function(){
     var logo=document.getElementById('introLogo'), target=document.querySelector('header .logo img');
     if(!target){finish();return;}
@@ -608,8 +613,8 @@
     logo.style.top=(r.top+r.height/2)+'px';
     logo.style.width=r.width+'px';
     logo.style.transform='translate(-50%,-50%) scale(1)';
-  },11000));
-  timers.push(setTimeout(finish,12700));
+  },10000));
+  timers.push(setTimeout(finish,11600));
   document.getElementById('introSkip').addEventListener('click',finish);
 })();
 </script>
