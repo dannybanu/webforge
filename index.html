@@ -512,7 +512,7 @@
   /* Intro animation */
   #intro{position:fixed; inset:0; z-index:99999; background:transparent;}
   #intro::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 50% 45%,#10132e 0%,#070916 65%,#02030a 100%); transition:opacity 1.4s ease;}
-  #intro.reveal::before{opacity:0;}
+  #intro.unveil::before{opacity:0;}
   #intro.hide{opacity:0; visibility:hidden; pointer-events:none; transition:opacity .35s ease, visibility .35s;}
   #intro .layer{position:absolute; inset:0; transition:opacity 1.1s ease, filter 1.1s ease; filter:blur(0);}
   #intro .layer:not(.on):not(#viewLayer){filter:blur(8px);}
@@ -607,7 +607,7 @@
     var logo=document.getElementById('introLogo'), target=document.querySelector('header .logo img');
     if(!target){finish();return;}
     var r=target.getBoundingClientRect();
-    intro.classList.add('flying','reveal');
+    intro.classList.add('flying','unveil');
     logo.classList.add('trail');
     logo.style.left=(r.left+r.width/2)+'px';
     logo.style.top=(r.top+r.height/2)+'px';
