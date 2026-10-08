@@ -409,8 +409,11 @@
     background:var(--accent-grad); color:#fff; font-size:12px; font-weight:700; padding:6px 16px; border-radius:999px;
   }
   .price-card h3{font-size:18px; font-weight:700; margin-bottom:6px;}
-  .price-card .price{font-size:34px; font-weight:800; margin:14px 0;}
+  .price-card .price{font-size:34px; font-weight:800; margin:14px 0; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:8px; min-height:84px;}
   .price-card .price span{font-size:14px; font-weight:500; color:var(--text-muted);}
+  .price-card .price .count{font-size:34px; font-weight:800; color:var(--text); font-variant-numeric:tabular-nums;}
+  .price-card .price .doar{display:inline-block; margin-left:0; padding:4px 10px; border-radius:999px; font-size:13px; font-weight:700; color:#fff; background:linear-gradient(135deg,#5b5bf5,#a78bfa); opacity:0; transform:translateX(-8px) scale(.9); transition:opacity .5s ease, transform .5s ease; white-space:nowrap;}
+  .price-card .price .doar.show{opacity:1; transform:none;}
   .price-card ul{list-style:none; display:flex; flex-direction:column; gap:10px; margin:22px 0 28px; font-size:14px; color:var(--text-muted); flex-grow:1;}
   .price-card ul li::before{content:'✓ '; color:var(--accent-2); font-weight:800;}
 
@@ -794,7 +797,7 @@
       <div class="price-card reveal">
         <h3>Basic</h3>
         <p style="color:var(--text-muted); font-size:14px;">Site de prezentare</p>
-        <div class="price">€299</div>
+        <div class="price"><span class="count" data-to="299">€0</span><span class="doar">doar 299 euro</span></div>
         <ul>
           <li>Până la 5 pagini</li>
           <li>Design responsive</li>
@@ -806,7 +809,7 @@
       <div class="price-card featured reveal">
         <h3>Business</h3>
         <p style="color:var(--text-muted); font-size:14px;">Magazin online</p>
-        <div class="price">€999</div>
+        <div class="price"><span class="count" data-to="999">€0</span><span class="doar">doar 999 euro</span></div>
         <ul>
           <li>Toate din Basic</li>
           <li>Integrare plăți & curieri</li>
@@ -818,7 +821,7 @@
       <div class="price-card reveal">
         <h3>Enterprise</h3>
         <p style="color:var(--text-muted); font-size:14px;">Aplicație web custom</p>
-        <div class="price">€2900</div>
+        <div class="price"><span class="count" data-to="2900">€0</span><span class="doar">doar 2900 euro</span></div>
         <ul>
           <li>Arhitectură custom</li>
           <li>API-uri & integrări</li>
@@ -1009,6 +1012,23 @@
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
+
+  // Price countdown
+  const countIo = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(!e.isIntersecting) return;
+      countIo.unobserve(e.target);
+      const el = e.target, to = +el.dataset.to, dur = 1800, start = performance.now();
+      const tick = (now) => {
+        const p = Math.min(1, (now - start) / dur), eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = '€' + Math.round(to * eased);
+        if(p < 1) requestAnimationFrame(tick);
+        else el.nextElementSibling.classList.add('show');
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.price .count').forEach(el => countIo.observe(el));
 
   // Timeline animation
   const timeline = document.getElementById('timeline');
