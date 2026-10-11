@@ -795,7 +795,7 @@
       <div class="price-card reveal">
         <h3>Basic</h3>
         <p style="color:var(--text-muted); font-size:14px;">Site de prezentare</p>
-        <div class="price"><span class="count" data-to="299">€0</span></div>
+        <div class="price"><span class="count" data-from="500" data-to="299">€500</span></div>
         <ul>
           <li>Până la 5 pagini</li>
           <li>Design responsive</li>
@@ -807,7 +807,7 @@
       <div class="price-card featured reveal">
         <h3>Business</h3>
         <p style="color:var(--text-muted); font-size:14px;">Magazin online</p>
-        <div class="price"><span class="count" data-to="999">€0</span></div>
+        <div class="price"><span class="count" data-from="1500" data-to="999">€1500</span></div>
         <ul>
           <li>Toate din Basic</li>
           <li>Integrare plăți & curieri</li>
@@ -819,7 +819,7 @@
       <div class="price-card reveal">
         <h3>Enterprise</h3>
         <p style="color:var(--text-muted); font-size:14px;">Aplicație web custom</p>
-        <div class="price"><span class="count" data-to="2900">€0</span></div>
+        <div class="price"><span class="count" data-from="4500" data-to="2900">€4500</span></div>
         <ul>
           <li>Arhitectură custom</li>
           <li>API-uri & integrări</li>
@@ -1016,10 +1016,10 @@
     entries.forEach(e => {
       if(!e.isIntersecting) return;
       countIo.unobserve(e.target);
-      const el = e.target, to = +el.dataset.to, dur = 1800, start = performance.now();
+      const el = e.target, to = +el.dataset.to, from = +el.dataset.from, dur = 1800, start = performance.now();
       const tick = (now) => {
         const p = Math.min(1, (now - start) / dur), eased = 1 - Math.pow(1 - p, 3);
-        el.textContent = '€' + Math.round(to * eased);
+        el.textContent = '€' + Math.round(from - (from - to) * eased);
         if(p < 1) requestAnimationFrame(tick);
       };
       requestAnimationFrame(tick);
