@@ -552,6 +552,17 @@
   #introSkip:hover{background:rgba(124,124,255,.2);}
   body.intro-lock{overflow:hidden;}
   @media (max-width:700px){.pv-cards{grid-template-columns:repeat(2,1fr);} .pv-nav b:nth-of-type(n+3){display:none;}}
+  #viewLayer{padding-top:max(9vh,56px);}
+  #introCode{font-size:clamp(13px,min(3.2vw,4.6vh),38px); padding:3vh 5vw;}
+  .bar{padding:clamp(8px,2vh,16px) 18px;}
+  #introSkip{top:max(10px,1.5vh); right:max(10px,2vw); z-index:5;}
+  @media (max-height:480px){
+    #viewLayer{gap:2vh; padding:50px 4vw 2vh;}
+    .pv-hero{flex-basis:12vh;} .pv-cards i{min-height:10vh;} .pv-form{margin-top:1vh; gap:1.5vh;}
+    #introTitle strong{font-size:clamp(40px,22vh,120px);} #introTitle small{font-size:clamp(11px,4vh,22px);}
+    #introLogo{width:min(560px,45vh*4.4,80vw);}
+  }
+  @media (max-width:420px){#introCode{font-size:clamp(14px,4.2vw,20px);} #introTitle small{letter-spacing:.3em;}}
 </style>
 </head>
 <body data-theme="dark" class="intro-lock">
